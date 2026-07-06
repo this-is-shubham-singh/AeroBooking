@@ -1,0 +1,8 @@
+D:\airline\microservices\common-lib\src\main\java\com\micro\embeddable\Address.java
+D:\airline\microservices\common-lib\src\main\java\com\micro\embeddable\GeoCode.java
+D:\airline\microservices\common-lib\src\main\java\com\micro\enums\UserRole.java
+D:\airline\microservices\common-lib\src\main\java\com\micro\payload\request\AirportRequest.java
+D:\airline\microservices\common-lib\src\main\java\com\micro\payload\request\CityRequest.java
+D:\airline\microservices\common-lib\src\main\java\com\micro\payload\response\AirportResponse.java
+D:\airline\microservices\common-lib\src\main\java\com\micro\payload\response\ApiResponse.java
+D:\airline\microservices\common-lib\src\main\java\com\micro\payload\response\CityResponse.java

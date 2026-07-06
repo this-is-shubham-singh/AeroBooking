@@ -1,0 +1,13 @@
+com\micro\payload\response\CityResponse$CityResponseBuilder.class
+com\micro\payload\request\AirportRequest$AirportRequestBuilder.class
+com\micro\payload\response\AirportResponse.class
+com\micro\embeddable\Address$AddressBuilder.class
+com\micro\payload\request\AirportRequest.class
+com\micro\embeddable\GeoCode.class
+com\micro\embeddable\Address.class
+com\micro\payload\request\CityRequest.class
+com\micro\payload\response\CityResponse.class
+com\micro\payload\response\AirportResponse$AirportResponseBuilder.class
+com\micro\embeddable\GeoCode$GeoCodeBuilder.class
+com\micro\enums\UserRole.class
+com\micro\payload\request\CityRequest$CityRequestBuilder.class
