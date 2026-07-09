@@ -1,6 +1,9 @@
 package com.micro.user_service.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.micro.enums.UserRole;
+
+import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -36,6 +39,10 @@ public class User {
     private String email;
 
     private String phone;
+
+    @Column(nullable = false)
+    @JsonIgnore
+    private String password;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
