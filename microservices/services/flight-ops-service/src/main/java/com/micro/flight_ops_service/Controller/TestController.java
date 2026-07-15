@@ -1,13 +1,16 @@
-package com.micro.airline_core_service.controller;
+package com.micro.flight_ops_service.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/test")
 public class TestController {
 
-    @GetMapping("/test")
+    @GetMapping
     public String test() {
-        return "Airline Core Service is running successfully!";
+        return "flight ops worki";
     }
 }
+    
