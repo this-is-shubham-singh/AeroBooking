@@ -14,10 +14,9 @@ public interface FlightService {
             Long airlineId,
             Long departureAirportId,
             Long arrivalAirportId,
-            Pageable pageable
-    );
+            Pageable pageable);
 
-    FlightResponse getFlightById(Long id);  
+    FlightResponse getFlightById(Long id);
 
     FlightResponse updateFlight(Long id, FlightRequest flightRequest);
 

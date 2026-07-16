@@ -17,10 +17,9 @@ public interface FlightInstanceService {
             Long arrivalAirportId,
             Long flightId,
             Long onDate,
-            Pageable pageable
-    );
+            Pageable pageable);
 
     FlightInstanceResponse updateFlightInstance(Long id, FlightInstanceRequest request);
 
-    void deleteFlightInstance(Long id);
+    void deleteFlightInstance(Long airlineId, Long id);
 }
