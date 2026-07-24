@@ -27,6 +27,10 @@ public class FareRulesServiceImpl implements FareRulesService {
         Fare fare = fareRepository.findById(request.getFareId())
                 .orElseThrow(() -> new RuntimeException("Fare not found with ID: " + request.getFareId()));
 
+        if (fare.getFareRules() != null) {
+            throw new RuntimeException("Fare rules already exist for this fare ID: " + request.getFareId());
+        }
+
         FareRules fareRules = FareRulesMapper.toEntity(request, fare);
         FareRules savedRules = fareRulesRepository.save(fareRules);
 

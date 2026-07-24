@@ -70,8 +70,9 @@ public class Fare {
     @Column(name = "fare_label")
     private String fareLabel;
 
-    // todo: when create baggage policy
-    // private BaggagePolicy baggagePolicy;
+    @OneToOne
+    @JoinColumn(name = "baggage_policy_id")
+    private BaggagePolicy baggagePolicy;
 
     @OneToOne
     @JoinColumn(name = "fare_rules_id")

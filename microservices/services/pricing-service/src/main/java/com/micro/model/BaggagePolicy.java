@@ -18,37 +18,53 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.Instant;
 
 @Entity
-@Table(name = "fare_rules")
+@Table(name = "baggage_policies")
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class FareRules {
+public class BaggagePolicy {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String ruleName;
-
-    private Long airlineId;
-
-    @OneToOne(mappedBy = "fareRules")
+    @OneToOne(mappedBy = "baggagePolicy")
     @JsonIgnore
     private Fare fare;
 
-    private Boolean isRefundable;
+    @Column(nullable = false)
+    private String name;
 
-    private Double changeFee;
+    private String description;
 
-    private Double cancellationFee;
+    private Double cabinBaggageMaxWeight;
 
-    private Integer refundDeadlineDays;
+    @Builder.Default
+    private Integer cabinBaggagePieces = 1;
 
-    private Integer changeDeadlineHours;
+    private Double cabinBaggageWeightPerPiece;
 
-    private Boolean isChangeable;
+    private Double cabinBaggageMaxDimension;
+
+    private Double checkInBaggageMaxWeight;
+
+    @Builder.Default
+    private Integer checkInBaggagePieces = 1;
+
+    private Double checkInBaggageWeightPerPiece;
+
+    @Builder.Default
+    private Integer freeCheckedBagsAllowance = 0;
+
+    @Builder.Default
+    private Boolean priorityBaggage = false;
+
+    @Builder.Default
+    private Boolean extraBaggageAllowance = false;
+
+    private Long airlineId;
 
     @CreationTimestamp
     @Column(updatable = false)
